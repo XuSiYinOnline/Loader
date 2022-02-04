@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	  <meta charset="utf-8"/>
+	  <title>预加载</title>
+	  <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen, print"/>	  
+</head>
+<body>
+<!-- 预加载 -->
+<div id="preloader">
+	<div id="status"></div>
+</div>
+<!-- 网站内容 -->
+<h3>网站内容</h3>
+<!-- jQuery插件 -->
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<!-- 预加载 -->
+<script type="text/javascript">
+		$(window).on('load', function() { // 确保整个站点已加载
+			$('#status').fadeOut(); // 首先淡出加载动画 
+            $('#preloader').delay(350).fadeOut('slow'); // 淡出覆盖网站的白色DIV. 
+            $('body').delay(350).css({'overflow':'visible'});
+		})
+</script> 
+</body>
+</html>

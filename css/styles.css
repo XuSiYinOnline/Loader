@@ -1,0 +1,35 @@
+﻿@charset "utf-8";
+body {
+	overflow: hidden;
+}
+/* 预加载 */
+#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff; /* 蒙版颜色更改 */
+	z-index:99; /* 确保它在上面 */
+}
+#status {
+	width:200px;
+	height:200px;
+	position:absolute;
+	left:50%; /* 在屏幕水平居中加载动画 */
+	top:50%; /* 在屏幕垂直居中加载动画 */
+	background-image:url(../imges/loader.svg); /* 加载动画的路径 */
+    /* background-image:url(../imges/loader1.gif); */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-100px 0 0 -100px; /* 宽度和高度/2 */
+}
+h3 {
+    width: 100%;
+    position: absolute; 
+    transform: translate(-50%, -50%);
+    top: 48%;
+    left: 50%;
+    font-size: 12px;
+    text-align: center;
+}
